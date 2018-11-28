@@ -1,11 +1,10 @@
 
-
-
-
 <table class ="table table table-bordered">
-  
-
   <tbody>
+
+   
+<%=render search_lists_path%>
+
     <% @lists.each do |list| %>
     
       <% if list.completed %>
@@ -45,6 +44,7 @@
 </table>
 
 <br>
+
  <% if current_user%>
 <h5>
 <%= link_to 'New Plan', new_list_path %>|
@@ -52,7 +52,8 @@
 <%=link_to 'Delete marked items ', home_trash_all_finish_path, data: { confirm: 'Are you sure?' } %>
   
 </h5>
-  <%= link_to 'Sigh out',destroy_user_session_path, method: :delete %> 
+  <%= link_to 'Sigh out',destroy_user_session_path, method: :delete %> |
   <%else%>
    <%= link_to 'Sigh in',new_list_path %> 
 <%end%>
+<%= link_to 'Back', lists_path %>

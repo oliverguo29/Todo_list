@@ -1,0 +1,5 @@
+<div class="pull-rigth" style="margin-right">
+  <%= search_form_for @q, html: {class: "form-inline" } do |f| %>
+  <% f.search_field :description_cont, placeholder: "Enter to search...", class:"form-control"%>
+  <%end%>
+</div>

@@ -4,7 +4,11 @@ class ListsController < ApplicationController
   # GET /lists
   # GET /lists.json
   def index
-    @lists = List.all
+    
+    
+    @q = List.search(params[:q])
+    @lists = @q.result
+    
   end
 
   # GET /lists/1
