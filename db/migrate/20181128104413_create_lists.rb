@@ -3,8 +3,8 @@ class CreateLists < ActiveRecord::Migration[5.2]
     create_table :lists do |t|
       t.string :description
       t.boolean :completed, default: false
-
       t.timestamps
+      
     end
   end
 end

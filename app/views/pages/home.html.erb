@@ -1,0 +1,17 @@
+<h1>Welcome</h1>
+<table>
+<% if current_user %>
+    <td><%= link_to 'Sigh out',destroy_user_session_path, method: :delete %> </td>
+    <td><%= link_to 'View List', lists_path %></td>
+<% else %>
+<table>
+    <h4>
+    <td> <%= link_to 'Sign up', new_user_registration_path %> </td>
+    <td><%= link_to 'Sign in', new_user_session_path %></td>
+    <td><%= link_to 'View List', lists_path %></td>
+    </h4>
+</table>
+<%end%>
+
+
+</table>
